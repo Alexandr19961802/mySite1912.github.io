@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Untitled-2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+       <a href="/Untitled-1.html"><img src="/Hero/1600w-bK2_yszjRPw.webp" alt="Логотип" /></a>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="/Untitled-2.html">О нас</a>
+        <a href="#">Каталог</a>
+        <a href="#contakt">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <section>
+    <div class="bg-img">
+      <img src="/Hero/VBO_9278-1-scaled.jpg" alt="">
+      <div class="overlay">
+        <div class="text-section">
+          <h2> «Создаем моду. Прямо здесь. Прямо сейчас.»</h2>
+          <button>Смотреть каталог</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="bg">
+    <div class="main-text">
+      <p>Trendroom — это пространство, где мода обретает форм. <br> Мы создаем одежду с характером, сочетающую комфорт,
+        минимализм и стиль. <br> Все вещи разработаны с вниманием к деталям и современным трендам.
+      </p>
+    </div>
+  </main>
+  <main class="card">
+    <div class="price">
+      <img src="/Hero/6657.jpg" alt="">
+      <p>Цена:890 грн</p>
+      <a href=""><button>Подробнее</button></a>
+    </div>
+    <div class="price">
+      <img src="/Hero/photo_2023-08-29_12-31-51yzecq_med.jpg" alt="">
+      <p>Цена:2199</p>
+      <a href=""><button>Подробнее</button></a>
+    </div>
+    <div class="price">
+      <img src="/Hero/0358254b16135b1fa42dd8260a23b80c.jpg" alt="">
+      <p>Цена:3190</p>
+      <a href=""><button>Подробнее</button></a>
+    </div>
+  </main>
+</body>
+<section class="adress" id="contakt">
+  <div>
+    <p>Телефон:<a href="">+380 67 123 45 67</a></p>
+    <p>Email: <a href="">hello@trendroom.ua </a></p>
+  </div>
+  <div>
+    <p>Instagram: <a href="">@trendroom.ua </a></p>
+    <p>Telegram: <a href="">@trendroom_support</a></p>
+  </div>
+
+</section>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateX(0)';
+      } else {
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateX(-100px)';
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.text-section').forEach(el => observer.observe(el));
+  const observer1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateX(0)';
+      } else {
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateX(200px)';
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.main-text').forEach(el => observer1.observe(el));
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</html>

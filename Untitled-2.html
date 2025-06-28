@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Untitled-1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/Untitled-1.html"><img src="/Hero/1600w-bK2_yszjRPw.webp" alt="Логотип" /></a>
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="/Untitled-1.html">Главная</a>
+                <a href="#">Каталог</a>
+
+            </nav>
+        </div>
+    </header>
+    <section class="bg-img">
+
+        <div class="bg-img">
+            <img src="/Hero/slide.jpg" alt="">
+            <div class="overlay">
+                <div class="text-section">
+                    <h2> Trendroom — это пространство, где современная мода обретает форму. Мы — не просто бренд
+                        <br>одежды, а команда людей, вдохновлённых минимализмом, комфортом и уникальностью. <br>Каждое
+                        изделие, которое мы создаём, — результат любви к стилю, вниманию к деталям и <br>стремлению
+                        сделать повседневную одежду особенной. <br>Мы верим, что мода должна быть доступной, практичной
+                        и отражать личность. Поэтому наши <br>коллекции — это баланс между классикой и трендами.
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text">
+        <div class="text2">
+            <h1>«Наши принципы / философия»</h1>
+        </div>
+
+        <div class="text1">
+
+
+            <div class="left1">
+
+                <div class="right">
+                    <h1>🌿 Натуральные ткани
+
+                    </h1>
+                </div>
+                <div class="right">
+                    <h1>🇺🇦 Сделано в Украине
+
+                    </h1>
+                </div>
+                <div class="right">
+                    <h1>♻️ Этичное производство
+
+                    </h1>
+                </div>
+
+            </div>
+            <div class="right1">
+
+                <div class="left">
+                    <h1 class="ret1">❤️ Индивидуальный подход
+
+                    </h1>
+
+                </div>
+
+                <div class="left">
+                    <h1 class="ret">✂️ Ручная работа
+
+                    </h1>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                } else {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateX(-100px)';
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        document.querySelectorAll('.text-section').forEach(el => observer.observe(el));
+        const observer1 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                } else {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateX(200px)';
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+
+        const observer4 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                else {
+                    entry.target.classList.remove('show'); // ← это важно для повторной анимации
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        // Наблюдаем за всеми элементами с нужными классами
+        document.querySelectorAll('.left, .right').forEach(el => observer4.observe(el));
+
+
+
+
+        document.querySelectorAll('.main-text').forEach(el => observer1.observe(el));
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</head>

@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* НАВБАР */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+
+
+.logo img {
+    display: block;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+/* БУРГЕР */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        z-index: 999;
+    }
+
+    .card img {
+        width: 350px;
+        height: 80%;
+        padding-top: 5%;
+
+    }
+
+    .adress {
+        margin-top: 5%;
+        height: 100vh;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        padding-inline: 1em !important;
+        /* ограничим отступы */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0 1%;
+    width: 100%;
+    background-color: black;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-inline: 2em;
+    font-size: x-large;
+    border-bottom: 5px solid transparent;
+    /* ← Добавлено */
+    transition: border-color 0.3s ease;
+    /* ← Плавный эффект */
+}
+
+.nav-links a:hover {
+    border-bottom: 5px solid white;
+}
+.logo img:hover {
+    filter: brightness(0.5); /* 0.5 — это затемнение на 50% */
+  }
+
+
+.bg-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.615);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.text-section {
+    opacity: 0;
+
+    transition: all 0.8s ease-out;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+
+.main-text {
+    opacity: 0;
+
+    transition: all 0.8s ease-out;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.text-section h2 {
+    position: relative;
+    color: white;
+    font-family: "Tinos", serif;
+    font-size: xxx-large;
+
+    top: 350px;
+    left: 160px;
+}
+
+.text-section button {
+    position: relative;
+    font-family: "Tinos", serif;
+    font-size: xx-large;
+    background-color: rgba(46, 33, 33, 0.874);
+    color: white;
+
+
+
+    cursor: pointer;
+    top: 370px;
+    left: 500px;
+    padding: 1%;
+}
+
+.text-section button:hover {
+    background-color: white;
+    color: black;
+}
+
+.bg {
+    background-image: url(/Hero/clothing_brand_logo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.main-text p {
+    padding: 10%;
+    font-size: x-large;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card img {
+    width: 350px;
+    height: 80%;
+    padding-top: 5%;
+}
+
+.card .price {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+}
+
+.card .price button {
+    padding: 3%;
+    margin-top: 2%;
+    cursor: pointer;
+    background-color: rgba(65, 62, 62, 0.87);
+    color: white;
+}
+
+.card .price button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.adress {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+    height: 30vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adress p {
+    padding: 20px;
+    color: white;
+}
+
+.adress a {
+    padding: 20px;
+    color: rgb(30 255 3);
+    text-decoration: none;
+}
+
+@media (max-width:1150px) {
+    .text-section h2 {
+        position: relative;
+        color: white;
+        font-family: "Tinos", serif;
+        font-size: xxx-large;
+        top: 250px;
+        left: 60px;
+    }
+
+    .card .price img {
+        width: 250px;
+    }
+
+    .text-section button {
+        position: relative;
+        font-family: "Tinos", serif;
+        font-size: xx-large;
+        background-color: rgba(46, 33, 33, 0.874);
+        color: white;
+        cursor: pointer;
+        top: 293px;
+        left: 500px;
+        padding: 1%;
+    }
+}
+
+@media (max-width:900px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-section h2 {
+        position: relative;
+        color: white;
+        font-family: "Tinos", serif;
+        font-size: xxx-large;
+        top: 245px;
+        left: -14px;
+    }
+
+    .card {
+        padding-bottom: 20px;
+    }
+
+    .text-section button {
+        position: relative;
+        font-family: "Tinos", serif;
+        font-size: xx-large;
+        background-color: rgba(46, 33, 33, 0.874);
+        color: white;
+
+
+        cursor: pointer;
+        top: 270px;
+        left: 320px;
+        padding: 1%;
+    }
+
+    .adress {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: larger;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .adress p {
+        padding-top: 20px;
+        color: white;
+    }
+
+    .adress a {
+        padding-top: 20px;
+        color: rgb(30 255 3);
+        text-decoration: none;
+    }
+
+    .card .price img {
+        width: 450px;
+    }
+
+    .bg-img {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .bg-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.615);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg {
+        background-image: url(/Hero/clothing_brand_logo.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:825px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-section h2 {
+        position: relative;
+        color: white;
+        font-family: "Tinos", serif;
+        font-size: xxx-large;
+        top: 160px;
+        left: -14px;
+    }
+
+    .text-section button {
+        position: relative;
+        font-family: "Tinos", serif;
+        font-size: xx-large;
+        background-color: rgba(46, 33, 33, 0.874);
+        color: white;
+
+
+        cursor: pointer;
+        top: 270px;
+        left: 220px;
+        padding: 1%;
+    }
+
+    .adress {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: larger;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .adress p {
+        padding-top: 20px;
+        color: white;
+    }
+
+    .adress a {
+        padding-top: 20px;
+        color: rgb(30 255 3);
+        text-decoration: none;
+    }
+
+    .card .price img {
+        width: 450px;
+    }
+
+    .bg-img {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .bg-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.615);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg {
+        background-image: url(/Hero/clothing_brand_logo.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:500px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-section h2 {
+        position: relative;
+        color: white;
+        font-family: "Tinos", serif;
+        font-size: x-large;
+
+        top: 150px;
+        left: 20px;
+    }
+
+    .text-section button {
+        position: relative;
+        font-family: "Tinos", serif;
+        font-size: xx-large;
+        background-color: rgba(46, 33, 33, 0.874);
+        color: white;
+
+
+        cursor: pointer;
+        top: 170px;
+        left: 30px;
+        padding: 1%;
+    }
+
+    .adress {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: larger;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .adress p {
+        padding-top: 20px;
+        color: white;
+    }
+
+    .adress a {
+        padding-top: 20px;
+        color: rgb(30 255 3);
+        text-decoration: none;
+    }
+
+    .card .price img {
+        width: 250px;
+    }
+
+    .bg-img {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    .bg-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.615);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg {
+        background-image: url(/Hero/clothing_brand_logo.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+}
